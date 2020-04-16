@@ -1,6 +1,5 @@
 """Simple optimizer algorithm."""
 
-from datatype import Tensor
 from network import Network
 
 

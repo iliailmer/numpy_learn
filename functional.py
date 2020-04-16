@@ -1,3 +1,4 @@
+"""Basic functions needed for the module."""
 import numpy as np
 from scipy.special import softmax as s
 from datatype import Tensor

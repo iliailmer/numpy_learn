@@ -1,0 +1,6 @@
+__pycache__
+.vscode
+.mypy_cache
+*.csv
+.ipynb*
+MNIST_homework.ipynb
