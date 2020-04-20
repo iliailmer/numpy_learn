@@ -43,7 +43,7 @@ class Linear:
         self.dydw = self.input.T @ grad
         # we sum across batches and get shape (out_features)
         self.dydb = grad.sum(axis=0)
-        # output must be of shape (batch_size, output_features)
+        # output must be of shape (batch_size, out_features)
         return grad @ self.W.T
 
     def __call__(self, x: Tensor) -> Tensor:
