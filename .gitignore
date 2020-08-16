@@ -3,4 +3,4 @@ __pycache__
 .mypy_cache
 *.csv
 .ipynb*
-MNIST_homework.ipynb
+MNIST_homework*
