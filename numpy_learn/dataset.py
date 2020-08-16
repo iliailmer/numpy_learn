@@ -13,7 +13,9 @@ class DataSet:
     def get_data(self, batch_size: int):
         """Generate iterator for the dataset."""
         offset = 0
-        while (offset+batch_size <= len(self.X)):
-            yield (self.X[offset:offset+batch_size],
-                   self.y[offset:offset+batch_size])
+        while offset + batch_size <= len(self.X):
+            yield (
+                self.X[offset : offset + batch_size],
+                self.y[offset : offset + batch_size],
+            )
             offset += batch_size

@@ -16,14 +16,14 @@ class Network:
 
     def forward(self, x: Tensor):
         """Run the forward pass."""
-        for l in self.layers:
-            x = l(x)
+        for layer in self.layers:
+            x = layer(x)
         return x
 
     def backward(self, grad: Tensor):
         """Run the backward pass."""
-        for l in self.layers[::-1]:
-            grad = l.backward(grad)
+        for layer in self.layers[::-1]:
+            grad = layer.backward(grad)
         return grad
 
     def __call__(self, x: Tensor):
@@ -32,4 +32,4 @@ class Network:
 
     def __repr__(self) -> str:
         """Print the representation for the network."""
-        return "\n".join(l.__repr__() for l in self.layers)
+        return "\n".join(layer.__repr__() for layer in self.layers)

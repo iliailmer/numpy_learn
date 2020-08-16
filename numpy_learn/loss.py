@@ -9,7 +9,7 @@ class Loss:
 
     def __init__(self):
         """Initialize the class with 0 gradient."""
-        self.grad = 0.
+        self.grad = 0.0
 
     def grad_fn(self, pred: Tensor, true: Tensor) -> Tensor:
         """Create placeholder for the gradient funtion."""
@@ -42,7 +42,7 @@ class MSE(Loss):
             shape (batch, )
 
         """
-        return (pred - true)/true.shape[0]
+        return (pred - true) / true.shape[0]
 
     def loss_fn(self, pred: Tensor, true: Tensor) -> Tensor:
         """Calculate the MSE.
@@ -54,7 +54,7 @@ class MSE(Loss):
             shape (batch,)
 
         """
-        return 0.5*np.sum((pred - true)**2)/true.shape[0]
+        return 0.5 * np.sum((pred - true) ** 2) / true.shape[0]
 
     def __repr__(self):
         """Put pretty representation in Jupyter/IPython."""

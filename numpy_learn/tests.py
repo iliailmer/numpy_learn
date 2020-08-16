@@ -37,10 +37,7 @@ def testMSE():  # noqa D103
 
 
 def testNetwork():  # noqa D103
-    net = Network([Linear(10, 64),
-                   ReLU(),
-                   Linear(64, 2),
-                   Sigmoid()])
+    net = Network([Linear(10, 64), ReLU(), Linear(64, 2), Sigmoid()])
     x = np.random.randn(32, 10)
     y = np.random.randn(32, 2)
     mse = MSE()

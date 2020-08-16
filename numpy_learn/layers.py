@@ -52,8 +52,10 @@ class Linear:
 
     def __repr__(self) -> str:
         """Print a representation for Jupyter/IPython."""
-        return f"""Linear Layer:\n\tWeight: {self.W.shape}"""\
+        return (
+            f"""Linear Layer:\n\tWeight: {self.W.shape}"""
             + f"""\n\tBias: {self.b.shape}"""
+        )
 
 
 class ReLU:
